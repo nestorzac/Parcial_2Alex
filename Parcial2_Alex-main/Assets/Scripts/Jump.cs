@@ -41,6 +41,7 @@ public class Jump : MonoBehaviour
 
     public void StartJump()
     {
+        SoundManager.instance.Play("Jump");
         if(!canJump)
         {
             return;

@@ -28,6 +28,7 @@ public class Dash : MonoBehaviour
         {
             canDash = false;
             onDash?.Invoke();
+            SoundManager.instance.Play("Dash");
             isDashing = true;
             Invoke(nameof(StopDash), duration);
         }
