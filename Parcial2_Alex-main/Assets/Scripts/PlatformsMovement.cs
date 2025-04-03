@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -64,6 +63,7 @@ public class PlatformsMovement : MonoBehaviour
     public void IncreaseSpeed()
     {
         speed += speedIncrease;
+        pastSpeed+= speedIncrease;
     }
 
 

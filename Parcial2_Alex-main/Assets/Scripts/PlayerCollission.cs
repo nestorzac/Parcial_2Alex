@@ -9,6 +9,8 @@ public class PlayerCollission : MonoBehaviour
     private UnityEvent<Transform> onObstacleDestroy;
     [SerializeField]
     private UnityEvent<Transform> OnCollisionDie;
+    [SerializeField]
+    private UnityEvent onCoinCollected;
     private Dash dash;
 
 
@@ -39,7 +41,13 @@ public class PlayerCollission : MonoBehaviour
     {
         if (other.CompareTag("DeadZone"))
         {
+           OnCollisionDie?.Invoke(transform);
             onPlayerLose?.Invoke();
+        }
+        else if (other.CompareTag("Coin"))
+        {
+            other.gameObject.SetActive(false);
+            onCoinCollected?.Invoke();
         }
     }
 }
