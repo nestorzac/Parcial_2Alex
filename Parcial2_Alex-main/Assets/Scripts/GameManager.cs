@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     private UnityEvent onLoseGame;
     [SerializeField]
     private UnityEvent onShowGameOverScreen;
+    [SerializeField]
+    private UnityEvent<int> onShowTimer;
 
     [SerializeField]
     private float secondsToRestart = 3f;
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
     private void ShowGameOverScreen()
     {
         onShowGameOverScreen?.Invoke();
+        onShowTimer?.Invoke(3);
     }
 
     public void RespawnGame()
