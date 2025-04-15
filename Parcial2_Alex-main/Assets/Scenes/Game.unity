@@ -199,6 +199,18 @@ MonoBehaviour:
           m_StringArgument: FadeToWhite
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1112137392}
+        m_TargetAssemblyTypeName: RunSpeed, Assembly-CSharp
+        m_MethodName: StartRunSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: FadeToWhite
+          m_BoolArgument: 0
+        m_CallState: 2
   onRespawnGame:
     m_PersistentCalls:
       m_Calls:
@@ -334,6 +346,18 @@ MonoBehaviour:
           m_StringArgument: FadeToWhite
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1112137392}
+        m_TargetAssemblyTypeName: RunSpeed, Assembly-CSharp
+        m_MethodName: StartRunSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FadeToWhite
+          m_BoolArgument: 1
+        m_CallState: 2
   onFinishGame:
     m_PersistentCalls:
       m_Calls: []
@@ -448,6 +472,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 101791394}
+        m_TargetAssemblyTypeName: SlowMotion, Assembly-CSharp
+        m_MethodName: StartSlowMotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1112137392}
+        m_TargetAssemblyTypeName: RunSpeed, Assembly-CSharp
+        m_MethodName: StopRunSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1961112723}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
   onShowGameOverScreen:
     m_PersistentCalls:
       m_Calls:
@@ -455,6 +515,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
         m_MethodName: set_alpha
         m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 101791394}
+        m_TargetAssemblyTypeName: SlowMotion, Assembly-CSharp
+        m_MethodName: StopSlowMotion
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -491,6 +563,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &101791393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101791395}
+  - component: {fileID: 101791394}
+  m_Layer: 0
+  m_Name: SlowMotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &101791394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101791393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5e2ae183f88fa4fb02c9d7d6a43b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowMotionFactor: 0.5
+--- !u!4 &101791395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101791393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.602, y: 1.53, z: -1.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1129,6 +1246,7 @@ MonoBehaviour:
   shakeDuration: 0.5
   shakeMagnitudeX: 0.1
   shakeMagnitudeY: 0.1
+  shakeSpeed: 20
 --- !u!1 &311294240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1929,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379945467}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.602, y: 1.53, z: -1.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &419112142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419112143}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419112143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419112142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.602, y: 1.53, z: -1.89}
@@ -3116,8 +3265,8 @@ GameObject:
   - component: {fileID: 1112137387}
   - component: {fileID: 1112137388}
   - component: {fileID: 1112137389}
-  - component: {fileID: 1112137390}
   - component: {fileID: 1112137391}
+  - component: {fileID: 1112137392}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3290,10 +3439,10 @@ MonoBehaviour:
   maxJumpTime: 0.3
   jumpBoost: 0.5
   maxJumps: 2
-  _plays:
+  _Jump:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1112137390}
+      - m_Target: {fileID: 1961112723}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
         m_Mode: 5
@@ -3303,6 +3452,21 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Jump
+          m_BoolArgument: 0
+        m_CallState: 2
+  _Land:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1961112723}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Land
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1112137389
@@ -3330,6 +3494,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1961112723}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
           m_BoolArgument: 0
         m_CallState: 2
   onObstacleDestroy:
@@ -3413,28 +3589,6 @@ MonoBehaviour:
           m_StringArgument: +1000
           m_BoolArgument: 0
         m_CallState: 2
---- !u!95 &1112137390
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112137381}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db2e32e59f1392b4396ea0869fef9f34, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1112137391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3449,6 +3603,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerText: {fileID: 1643195538}
   animationName: PlayerStats
+--- !u!114 &1112137392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112137381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609e5b4353246aa4eb825822ddf0004f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increaseValue: 0.1
+  initialSpeedValue: 1
+  charecterAnimator: {fileID: 1961112723}
+  animatorValueName: RunSpeed
 --- !u!1 &1124921406
 GameObject:
   m_ObjectHideFlags: 0
@@ -10377,3 +10547,5 @@ SceneRoots:
   - {fileID: 1573629241}
   - {fileID: 1300298513}
   - {fileID: 1532701932}
+  - {fileID: 101791395}
+  - {fileID: 419112143}
