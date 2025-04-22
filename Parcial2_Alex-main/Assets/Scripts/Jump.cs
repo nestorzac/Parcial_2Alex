@@ -23,6 +23,8 @@ public class Jump : MonoBehaviour
     private UnityEvent _Jump;
     [SerializeField]
     public UnityEvent _Land;
+    [SerializeField]
+    public UnityEvent _Dash;
 
 
     private void Start()
@@ -98,6 +100,7 @@ public class Jump : MonoBehaviour
             RestartJumps();
             isGrounded = true;
            _Land?.Invoke();
+           _Dash?.Invoke();
         }        
     }
 }
